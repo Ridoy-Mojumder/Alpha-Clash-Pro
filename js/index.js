@@ -9,6 +9,13 @@ function continueGame() {
 document.addEventListener('keyup', function (element) {
     const randomElement = document.getElementById('current-alphabet').innerText.toLocaleLowerCase();
     const playerPress = element.key;
+
+    if(playerPress=='Escape'){
+        gameOver();
+    }
+
+
+
     if (randomElement === playerPress) {
         continueGame();
         removeBackgroundColor(randomElement);
